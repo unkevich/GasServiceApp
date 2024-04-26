@@ -1,0 +1,27 @@
+﻿<Page x:Class="GasServiceApp.Pages.TechDataProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasServiceApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="TechDataProfilePage">
+    <Grid Margin="10">
+
+        <StackPanel>
+            <TextBlock Text="Мои технические данные" Margin="20 10 0 10" FontSize="30" FontWeight="Bold" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+            <Separator Margin="5 0 5 10"/>
+            <DataGrid x:Name="DGridTech" x:FieldModifier="public" Height="480" Margin="20 10 20 10" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Логин" IsReadOnly="True" Width="*" Binding="{Binding Users.Login}"/>
+                    <DataGridTextColumn Header="Серия" IsReadOnly="True" Width="*" Binding="{Binding SerialNumber}"/>
+                    <DataGridTextColumn Header="Дата установки" IsReadOnly="True" Width="*" Binding="{Binding InstallationDate}"/>
+                    <DataGridTextColumn Header="Дата последней записи" IsReadOnly="True" Width="*" Binding="{Binding LastReadDate}"/>
+                    <DataGridTextColumn Header="Последнее прочитанное значение" IsReadOnly="True" Width="*" Binding="{Binding LastReadValue}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+    </Grid>
+</Page>

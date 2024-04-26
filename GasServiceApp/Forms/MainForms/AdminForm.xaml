@@ -1,0 +1,86 @@
+﻿<Window x:Class="GasServiceApp.Forms.MainForms.AdminForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GasServiceApp.Forms.MainForms"
+        mc:Ignorable="d"
+        Title="Панель администратора" 
+        Height="650" Width="1250"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <!-- markup left section -->
+            <ColumnDefinition Width="250"/>
+
+            <!-- markup right section -->
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <!-- left section -->
+        <Border x:Name="LeftBorder" Grid.Column="0" Background="{StaticResource cs_Background_Main}" CornerRadius="10 0 0 10">
+            <Grid>
+                <!-- markups left -->
+                <Grid.RowDefinitions>
+
+                    <!-- markup logo -->
+                    <RowDefinition Height="auto"/>
+
+                    <!-- markup menu -->
+                    <RowDefinition Height="131*"/>
+                    <RowDefinition Height="379*"/>
+
+                    <!-- markup profile -->
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <!-- logo -->
+                <StackPanel Grid.Row="0" Margin="10,10,10,10" Orientation="Horizontal">
+                    <Image Source="/Assets/Icons/logo.png" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Text="Газовый сервис" Foreground="{StaticResource cs_Foreground_Green}" Margin="10 0 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBlock Text="Панель администратора" Foreground="{StaticResource cs_Foreground_Gray_Two}" Margin="10 2 0 0" FontWeight="Regular" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Separator VerticalAlignment="Top" Margin="10,69,10,0"/>
+
+                <!-- menu -->
+                <StackPanel Grid.Row="1" Grid.RowSpan="2">
+                    <Button x:Name="btnMain" Content="Главная" HorizontalAlignment="Left" Width="240" Height="40" Margin="5 20 5 5" Style="{StaticResource buttonMenuStyle}" Click="btnMain_Click"/>
+                    <Button x:Name="btnUsers" Content="Управление пользователями" HorizontalAlignment="Left" Width="240" Height="40" Margin="5 10 5 5" Style="{StaticResource buttonMenuStyle}" Click="btnUsers_Click"/>
+                    <Button x:Name="btnApps" Content="Заявки на обслуживание" HorizontalAlignment="Left" Width="240" Height="40" Margin="5 10 5 5" Style="{StaticResource buttonMenuStyle}" Click="btnApps_Click"/>
+                    <Button x:Name="btnTech" Content="Технические данные" HorizontalAlignment="Left" Width="240" Height="40" Margin="5 10 5 5" Style="{StaticResource buttonMenuStyle}" Click="btnTech_Click"/>
+                    <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Width="240" Height="40" Margin="5 5 5 0" Style="{StaticResource buttonMenuStyle}" Click="btnBack_Click"/>
+                </StackPanel>
+
+                <!-- profile -->
+                <Separator Grid.Row="3" VerticalAlignment="Top" Margin="10,0,10,0"/>
+                <StackPanel Grid.Row="3" Margin="10,10,10,10" Orientation="Horizontal">
+                    <Image x:Name="img_user" Width="50" Height="50" HorizontalAlignment="Left"/>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Text="Профиль" Foreground="{StaticResource cs_Foreground_Green}" Margin="10 0 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="txt_name" Foreground="{StaticResource cs_Foreground_Gray_Two}" Margin="10 3 0 0" FontWeight="Regular" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button x:Name="btnProfile" Content="Личный кабинет" Width="135" Height="20" FontSize="13" Style="{StaticResource buttonTransparentGreenStyle}" Click="btnProfile_Click"/>
+                        <Button x:Name="btnExit" Content="Выйти из профиля" Width="175" Height="20" FontSize="13" Style="{StaticResource buttonTransparentGreenStyle}" Click="btnExit_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <!-- right section -->
+        <Border x:Name="RightBorder" Grid.Column="1" Background="{StaticResource cs_Background_MainLight}" CornerRadius="0 10 10 0" MouseDown="RightBorder_MouseDown">
+            <Grid>
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</Window>

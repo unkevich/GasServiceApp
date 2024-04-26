@@ -1,0 +1,29 @@
+﻿<Application x:Class="GasServiceApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GasServiceApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- color styles -->
+                <ResourceDictionary Source="Styles/ColorStyles.xaml"/>
+
+                <!-- buttons styles -->
+                <ResourceDictionary Source="Styles/ButtonsStyles.xaml"/>
+
+                <!-- textblocks styles -->
+                <ResourceDictionary Source="Styles/TextBlocksStyles.xaml"/>
+
+                <!-- textblocks styles -->
+                <ResourceDictionary Source="Styles/DataGridsStyles.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

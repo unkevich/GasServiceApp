@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GasServiceApp.Forms.MainForms"
+        xmlns:CustomControlls="clr-namespace:GasServiceApp.CustomControlls" x:Class="GasServiceApp.Forms.MainForms.RegisterForm"
+        mc:Ignorable="d"
+        Title="Регистрация" 
+        Height="500" Width="450"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent">
+    <Border x:Name="MainBorder" Background="{StaticResource cs_Background_Main}" Padding="30" CornerRadius="10" MouseDown="MainBorder_MouseDown">
+        <StackPanel>
+            <TextBlock Text="Регистрация" Foreground="{StaticResource cs_Foreground_Green}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="32" Margin="0 0 0 30"/>
+
+            <CustomControlls:TextBoxWithPlace x:Name="txtBox_Login" PlaceHolder="Логин" Height="60" Margin="0 0 0 10"/>
+            <CustomControlls:TextBoxWithPlace x:Name="txtBox_Password" PlaceHolder="Пароль" Height="60" Margin="0 0 0 10"/>
+            <CustomControlls:TextBoxWithPlace x:Name="txtBox_Email" PlaceHolder="Электронная почта" Height="60" Margin="0 0 0 10"/>
+            <CustomControlls:TextBoxWithPlace x:Name="txtBox_Fullname" PlaceHolder="ФИО" Height="60" Margin="0 0 0 10"/>
+
+            <Button x:Name="btnRegister" Content="Зарегистрироваться" Height="45" Style="{StaticResource buttonGreenStyle}" Click="btnRegister_Click"/>
+
+            <Button x:Name="btnBack" Content="Вернуться назад" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="{StaticResource cs_Foreground_Gray_Two}" Style="{StaticResource buttonTransparentGreenStyle}" Margin="0 10 0 20" Click="btnExit_Click"/>
+
+        </StackPanel>
+    </Border>
+</Window>

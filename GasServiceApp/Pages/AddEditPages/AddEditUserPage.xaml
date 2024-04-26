@@ -1,0 +1,42 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasServiceApp.Pages.AddEditPages"
+      xmlns:CustomControlls="clr-namespace:GasServiceApp.CustomControlls" x:Class="GasServiceApp.Pages.AddEditPages.AddEditUserPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="AddEditUserPage">
+    <Grid>
+
+        <StackPanel>
+            <TextBlock Text="Добавление / Редактирование информации о пользователе" Margin="20 10 0 10" FontSize="28" FontWeight="Bold" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+            <Separator Margin="5 0 5 0"/>
+            <Grid Margin="0 20 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" Grid.Column="0">
+
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Логин" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Пароль" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Роль" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Электронная почта" Width="170" Height="60" Margin="10 10 0 10"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1">
+
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="ФИО" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Номер телефона" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Статус" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Адрес" Width="170" Height="60" Margin="10 10 0 10"/>
+
+                </StackPanel>
+            </Grid>
+            <Button x:Name="btnSave" Content="Сохранить" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="250 30 250 0"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,23 @@
+﻿<Page x:Class="GasServiceApp.Pages.MainPages.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GasServiceApp.Pages.MainPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="ProfilePage">
+    <Grid Margin="10">
+
+        <StackPanel>
+            <TextBlock Text="Личный кабинет" Margin="20 10 0 10" FontSize="30" FontWeight="Bold" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+            <Separator Margin="5 0 5 10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnInfo" Content="Информация обо мне" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="20 10 0 10" Click="btnInfo_Click"/>
+                <Button x:Name="btnApps" Content="Мои заявки на обслуживание" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="20 10 0 10" Click="btnApps_Click"/>
+                <Button x:Name="btnTechData" Content="Мои технические данные" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="20 10 0 10" Click="btnTechData_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
