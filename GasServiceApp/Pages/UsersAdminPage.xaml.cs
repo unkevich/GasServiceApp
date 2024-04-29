@@ -24,15 +24,29 @@ namespace GasServiceApp.Pages {
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e) {
-            Manager.MainFrame.Navigate(new AddEditUserPage());
+            Manager.MainFrame.Navigate(new AddEditUserPage(null));
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e) {
-
+            var usersForRemoving = DGridUsers.SelectedItems.Cast<Users>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {usersForRemoving.Count()} элементов?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    GasServiceCenterEntities.GetContext().Users.RemoveRange(usersForRemoving);
+                    GasServiceCenterEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация удалена", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    DGridUsers.ItemsSource = GasServiceCenterEntities.GetContext().Users.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString(), "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e) {
-            Manager.MainFrame.Navigate(new AddEditUserPage());
+            Manager.MainFrame.Navigate(new AddEditUserPage((sender as Button).DataContext as Users));
         }
     }
 }

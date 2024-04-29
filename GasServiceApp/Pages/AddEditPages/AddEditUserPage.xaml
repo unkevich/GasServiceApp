@@ -20,22 +20,22 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Vertical" Grid.Column="0">
 
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Логин" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Пароль" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Роль" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Электронная почта" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Логин" Text="{Binding Login}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Пароль" Text="{Binding Password}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Роль" Text="{Binding RoleID}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Электронная почта" Text="{Binding Email}" Width="170" Height="60" Margin="10 10 0 10"/>
 
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Grid.Column="1">
 
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="ФИО" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Номер телефона" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Статус" Width="170" Height="60" Margin="10 10 0 10"/>
-                    <CustomControlls:TextBoxWithPlace PlaceHolder="Адрес" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="ФИО" Text="{Binding Fullname}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Номер телефона" Text="{Binding NumberPhone}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Статус" Text="{Binding VerifedID}" Width="170" Height="60" Margin="10 10 0 10"/>
+                    <CustomControlls:TextBoxWithPlace PlaceHolder="Адрес" Text="{Binding Address}" Width="170" Height="60" Margin="10 10 0 10"/>
 
                 </StackPanel>
             </Grid>
-            <Button x:Name="btnSave" Content="Сохранить" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="250 30 250 0"/>
+            <Button x:Name="btnSave" Content="Сохранить" Height="45" Style="{StaticResource buttonGreenStyle}" Margin="250 30 250 0" Click="btnSave_Click"/>
         </StackPanel>
 
     </Grid>
