@@ -13,13 +13,13 @@
             <TextBlock Text="Информация" Margin="20 10 0 10" FontSize="30" FontWeight="Bold" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
             <Separator Margin="5 0 5 10"/>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 20">
-                <TextBlock Text="Логин: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="Роль: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="Электронная почта: " Margin="10 10 10 15" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="ФИО: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="Номер телефона: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="Статус: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
-                <TextBlock Text="Адрес: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_login" Text="Логин: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_role" Text="Роль: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_email" Text="Электронная почта: " Margin="10 10 10 15" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_fullname" Text="ФИО: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_number" Text="Номер телефона: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_VerifedStatus" Text="Статус: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
+                <TextBlock x:Name="txt_Addres" Text="Адрес: " Margin="10 10 10 10" FontSize="15" FontWeight="Regular" Foreground="{StaticResource cs_Foreground_Gray_Two}"/>
             </StackPanel>
         </StackPanel>
 

@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\MainForms\ClientForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\MainForms\RecoveryPassForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +95,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Databank.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="CustomControlls\TextBoxWithPlace.xaml.cs">
       <DependentUpon>TextBoxWithPlace.xaml</DependentUpon>
@@ -142,6 +147,9 @@
     </Compile>
     <Compile Include="Forms\MainForms\AdminForm.xaml.cs">
       <DependentUpon>AdminForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForms\ClientForm.xaml.cs">
+      <DependentUpon>ClientForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForms\RecoveryPassForm.xaml.cs">
       <DependentUpon>RecoveryPassForm.xaml</DependentUpon>

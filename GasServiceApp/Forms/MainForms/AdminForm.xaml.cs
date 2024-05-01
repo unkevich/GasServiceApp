@@ -32,6 +32,10 @@ namespace GasServiceApp.Forms.MainForms {
         }
 
         private void btnUsers_Click(object sender, RoutedEventArgs e) {
+            if (Databank.Role == "Оператор") {
+                MessageBox.Show("Данная функция доступна администратору системы", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             Manager.MainFrame.Navigate(new UsersAdminPage());
         }
 

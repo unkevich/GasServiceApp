@@ -1,4 +1,5 @@
-﻿using GasServiceApp.Database;
+﻿using GasServiceApp.Classes;
+using GasServiceApp.Database;
 using GasServiceApp.Forms.MainForms;
 using System;
 using System.Collections.Generic;
@@ -50,11 +51,25 @@ namespace GasServiceApp {
                     if (us.Login == login) {
                         if (us.Password == pass) {
                             var role = db.Roles.Find(us.RoleID);
+                            var verf = db.VerifedStatus.Find(us.VerifedID);
+                            Databank.UserID = us.UserID;
+                            Databank.Login = us.Login;
+                            Databank.Password = us.Password;
+                            Databank.Role = role.RoleName;
+                            Databank.Email = us.Email;
+                            Databank.Fullname = us.Fullname;
+                            Databank.NumberPhone = us.NumberPhone;
+                            Databank.Verifed = verf.Name;
+                            Databank.Address = us.Address;
                             if (role.RoleName == "Клиент") {
-
+                                ClientForm cf = new ClientForm();
+                                this.Hide();
+                                cf.Show();
                             }
                             else if (role.RoleName == "Оператор") {
-
+                                AdminForm af = new AdminForm();
+                                this.Hide();
+                                af.Show();
                             }
                             else if (role.RoleName == "Администратор") {
                                 AdminForm af = new AdminForm();
