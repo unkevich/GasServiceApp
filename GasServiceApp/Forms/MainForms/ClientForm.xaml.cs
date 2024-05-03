@@ -31,5 +31,9 @@ namespace GasServiceApp.Forms.MainForms {
         private void btnAddApplication_Click(object sender, RoutedEventArgs e) {
 
         }
+
+        private void MainBorder_MouseDown(object sender, MouseButtonEventArgs e){
+            if (e.ChangedButton == MouseButton.Left) this.DragMove();
+        }
     }
 }

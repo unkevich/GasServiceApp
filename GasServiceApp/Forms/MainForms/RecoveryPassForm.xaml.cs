@@ -71,6 +71,7 @@ namespace GasServiceApp.Forms.MainForms {
                     txtBox_Code.Visibility = Visibility.Visible;
                     btnRecovery.Content = "Подтвердить код";
                     isCodeSent = true;
+                    MessageBox.Show($"Код: {recoveryCode}");
                 }
             }
             else
