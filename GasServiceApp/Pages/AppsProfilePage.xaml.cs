@@ -13,15 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GasServiceApp.Pages
-{
-    /// <summary>
-    /// Логика взаимодействия для AppsProfilePage.xaml
-    /// </summary>
-    public partial class AppsProfilePage : Page
-    {
-        public AppsProfilePage()
-        {
+namespace GasServiceApp.Pages {
+    public partial class AppsProfilePage : Page {
+        public AppsProfilePage() {
             InitializeComponent();
         }
     }

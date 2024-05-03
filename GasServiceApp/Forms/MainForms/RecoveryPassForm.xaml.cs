@@ -16,15 +16,13 @@ using System.Net;
 using System.Net.Mail;
 
 namespace GasServiceApp.Forms.MainForms {
-    public partial class RecoveryPassForm : Window
-    {
+    public partial class RecoveryPassForm : Window {
 
         private string recoveryCode = null;
         private string userEmail = null;
         private bool isCodeSent = false;
 
-        public RecoveryPassForm()
-        {
+        public RecoveryPassForm() {
             InitializeComponent();
         }
 
@@ -161,7 +159,7 @@ namespace GasServiceApp.Forms.MainForms {
             try
             {
                 MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                SmtpClient SmtpServer = new SmtpClient("unkevich@vk.com");
 
                 mail.From = new MailAddress("ilyaunkevitch@gmail.com");
                 mail.To.Add(userEmail);
@@ -169,7 +167,7 @@ namespace GasServiceApp.Forms.MainForms {
                 mail.Body = $"Новый пароль: {newPassword}";
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new NetworkCredential("ilyaunkevitch@gmail.com", "yourpassword");
+                SmtpServer.Credentials = new NetworkCredential("ilyaunkevitch@gmail.com", "propitanie2033metro76");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);

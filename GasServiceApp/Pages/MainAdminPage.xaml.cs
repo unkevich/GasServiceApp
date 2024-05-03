@@ -13,15 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GasServiceApp.Pages
-{
-    /// <summary>
-    /// Логика взаимодействия для MainAdminPage.xaml
-    /// </summary>
-    public partial class MainAdminPage : Page
-    {
-        public MainAdminPage()
-        {
+namespace GasServiceApp.Pages {
+    public partial class MainAdminPage : Page {
+        public MainAdminPage() {
             InitializeComponent();
         }
     }

@@ -22,15 +22,15 @@ namespace GasServiceApp.Pages {
             InitializeComponent();
             DGridTech.ItemsSource = GasServiceCenterEntities.GetContext().GasMeters.ToList();
         }
-
+        // метод для добавления информации
         private void btnAdd_Click(object sender, RoutedEventArgs e) {
             Manager.MainFrame.Navigate(new AddEditTechPage());
         }
-
+        // метод для удаления информации
         private void btnDelete_Click(object sender, RoutedEventArgs e) {
 
         }
-
+        // метод для редактирования информации
         private void BtnEdit_Click(object sender, RoutedEventArgs e) {
             Manager.MainFrame.Navigate(new AddEditTechPage());
         }

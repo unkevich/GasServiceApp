@@ -13,15 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GasServiceApp.Pages
-{
-    /// <summary>
-    /// Логика взаимодействия для TechDataProfilePage.xaml
-    /// </summary>
-    public partial class TechDataProfilePage : Page
-    {
-        public TechDataProfilePage()
-        {
+namespace GasServiceApp.Pages {
+    public partial class TechDataProfilePage : Page {
+        public TechDataProfilePage() {
             InitializeComponent();
         }
     }

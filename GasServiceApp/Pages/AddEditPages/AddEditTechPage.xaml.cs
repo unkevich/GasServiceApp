@@ -13,15 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GasServiceApp.Pages.AddEditPages
-{
-    /// <summary>
-    /// Логика взаимодействия для AddEditTechPage.xaml
-    /// </summary>
-    public partial class AddEditTechPage : Page
-    {
-        public AddEditTechPage()
-        {
+namespace GasServiceApp.Pages.AddEditPages {
+    public partial class AddEditTechPage : Page {
+        public AddEditTechPage() {
             InitializeComponent();
         }
     }
